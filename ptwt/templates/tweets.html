@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poor's Twitter</title>
+    <style>
+        #tweetapp table {
+            width: 100%;
+        }
+        #tweetapp table td {
+            padding: 3px 5px;
+        }
+        #tweetapp table thead td {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div id="tweetapp">
+        <h1>Tweets - [[output]]</h1>
+        <form action="">
+            <input type="text" v-model="username" placeholder="Your username">
+            <input type="text" v-model="usertweet" placeholder="write your tweet message here">
+            <button v-on:click="addTweet">Submit</button>
+        </form>
+
+        <div v-for="err in errMsgs">[[err]]</div>
+        <div v-if="tweet_list.length > 0">
+            <table>
+                <thead>
+                    <tr>
+                        <td>username</td>
+                        <td>tweet</td>
+                        <td>time of tweet</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                    </tr>
+                </thead>
+                <tr v-for="tweet in tweet_list">
+                    <td>[[ tweet.name ]]</td>
+                    <td>[[ tweet.message ]]</td>
+                    <td>[[ greet(tweet.timestamp) ]]</td>
+                </tr>
+            </table>
+        </div>
+        <div v-else>No tweets yet!</div> 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script>
+        axios.defaults.xsrfCookieName = 'csrftoken';
+        axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+    </script>
+    <script type='text/javascript'>
+        var tweet_list = {{ tweets_json|safe }};
+    </script>
+    <script>
+        var app = new Vue({
+            delimiters: ['[[', ']]'],
+            'el': '#tweetapp',
+            data: {
+                output: 'Tweet!',
+                username: '',
+                usertweet: '',
+                tweet_list: tweet_list,
+                errMsgs: []
+            },
+            methods: {
+                greet: function(p1){
+                    let date = new Date(p1)
+                    return moment(p1).calendar();
+                },
+                addTweet: function(evt){
+                    evt.preventDefault();
+                    this.errMsgs = [] 
+                    if (this.username === ''){
+                        console.log(evt)
+                        this.errMsgs.push('Enter username')
+                    }
+
+                    if(this.usertweet === ''){
+                        this.errMsgs.push('Enter Tweet message')
+                    }
+
+                    if(this.usertweet > 50){
+                        this.errMsgs.push('The username must be less thab 50 characters long')
+                    }
+
+                    if(this.usertweet < 4){
+                        this.errMsgs.push('The message must be more than 3 characters long')
+                    }
+
+                    if(this.usertweet.length > 50){
+                        this.errMsgs.push('The message must be less thab 50 characters long')
+                    }
+
+                    if(this.usertweet.length < 5){
+                        this.errMsgs.push('The message must be more than 5 characters long')
+                    }
+
+                    if(this.errMsgs.length > 0){
+                        this.errMsgs.push('Fix the errors above then click on Submit again')
+                    } else {
+                        let vThis = this;
+                        console.log('Submitting a Tweet.' + this.usertweet + ' - ' + this.username)
+                        axios
+                        .post('/tweets/', {
+                            name: this.username,
+                            message: this.usertweet,
+                        })
+                        .then(function (response) {
+                            console.log(response.data);
+                            console.log('Tweet submitted')
+                            
+                            var url = '/tweets/';
+                            axios
+                                .get(url)
+                                .then(response => {
+                                    vThis.tweet_list = response.data
+                                    vThis.output = "Tweet submitted."
+                                    vThis.username = ''
+                                    vThis.usertweet = ''
+                                })
+                                .catch(error => {
+                                    console.log(error);
+                                });                            
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                    }
+                }
+            },
+            mounted() {
+                var url = '/tweets/';
+                axios
+                    .get(url)
+                    .then(response => {
+                        this.tweet_list = response.data
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            },
+        });
+    </script>
+</body>
+</html>
+
