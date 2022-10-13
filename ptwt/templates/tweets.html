@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-    <div id="tweetapp">
+    <div id="tweetapp" style="display: none;">
         <h1>Tweets - [[output]]</h1>
         <form action="">
             <input type="text" v-model="username" placeholder="Your username">
@@ -140,6 +140,8 @@
                     .get(url)
                     .then(response => {
                         this.tweet_list = response.data
+                        // reveal the page after loading the table.
+                        document.getElementById("tweetapp").style.display = "block"; 
                     })
                     .catch(error => {
                         console.log(error);
