@@ -33,16 +33,16 @@ The tweet form should appear at the top of the page. The tweets table should app
 
 No login is required in order to tweet.
 ## Submission
-Create a public repository on GitHub or GitLab. Please DELETE the ‘master’ or ‘main’ branch and push your code to a branch called ‘sample’. (this is to prevent google from indexing your project). 
-Submit your repository’s link(s) by email to lmoore@accruvia.com.
+- Create a public repository on GitHub or GitLab. Please DELETE the ‘master’ or ‘main’ branch and push your code to a branch called ‘sample’. (this is to prevent google from indexing your project). 
+- Submit your repository’s link(s) by email to lmoore@accruvia.com.
 
 ## Technical requirements and stack
 The following stack elements MUST be used EXCLUSIVELY. If an application or library is not listed, it cannot be used.
 
-Django 3.0+ (backend)
-Django Rest Framework
-Vue
-SQLite (Django default settings)
+- Django 3.0+ (backend)
+- Django Rest Framework
+- Vue
+- SQLite (Django default settings)
 
 Do not use more libraries or software than are necessary to complete the project such as Docker. Although using Docker is a best practice (see below), you must not use any extra libraries or applications. This restriction protects your time by limiting your efforts to where we want to see them.
 
@@ -64,8 +64,8 @@ The Complete Hiring Process
 Accruvia follows a 3 step hiring process. The company intends to make final offers no later than the end of business on Tuesday, November 1.
 
 Complete this technical assessment. Grades are pass/mid/junior or fail. If you pass, you will be moved on to the next steps. We would like to receive your solution by the deadline mentioned above.
-Interview #1
-Interview #2
+- Interview #1
+- Interview #2
 
 A final decision is made after step 3, at which point we start to gather salary requirements and rank applicants against Accruvia’s priorities and needs.
 
