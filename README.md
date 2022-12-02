@@ -1,4 +1,4 @@
-# Accruvia Test Project - job listing on https://www.remoteok.com - SCAMMERS OR NOT
+### Accruvia Test Project - job listing on https://www.remoteok.com - SCAMMERS OR NOT
 https://docs.google.com/document/d/1Y1zuSSCBECBSgEqDdpoR5FfXk51RrRbHdyvkY59a_RU/edit#heading=h.vdkm6pb2zsh8
 See below for the full content of the document in case you might have GDrive access problems.
 
@@ -18,8 +18,9 @@ python manage.py migrate
 
 ### to post data using curl, first (optional)
 python manage.py createsuperuser
---
-# LTDR;
+
+
+# CONTENTS OF THE TASK
 # Poor Man's Twitter using VUE and Django
 This simple coding assessment tests your full-stack skills with Vue and Django. Even if you are unfamiliar with Vue, the requirements are simple enough that you could complete it by browsing the Vue documentation.
 ## Requirements
