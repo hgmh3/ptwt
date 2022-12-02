@@ -1,4 +1,4 @@
-### Accruvia Test Project - job listing on https://www.remoteok.com - SCAMMERS OR NOT
+### Accruvia Test Project - job listing on https://www.remoteok.com -Somewhere in EUROPE, SCAMMERS OR NOT
 https://docs.google.com/document/d/1Y1zuSSCBECBSgEqDdpoR5FfXk51RrRbHdyvkY59a_RU/edit#heading=h.vdkm6pb2zsh8
 See below for the full content of the document in case you might have GDrive access problems.
 
@@ -51,16 +51,24 @@ Optional libraries
 You may use Bootstrap if it speeds up your development time. Your use/lack of use of Bootstrap does not affect your evaluation.
 
 We discourage the use of Npm / Yarn / Webpack in this project for the sake of your time. Remember, it is completely acceptable to include Vue directly in your single html document with a reference to a CDN or local file. We will not be evaluating your ability to use javascript packages and asset managers in this project. Only use package managers if it’s going to save you time.
-How you will be evaluated
-Demonstrate your genuine interest in the position by committing 2-4 hours to a screening project
-Prove your knowledge of industry best practices without being explicitly directed as to what they are. That said, do not use any libraries or packages not listed in the Technical requirements
-We value your time and do not want to encourage a culture of self-sacrifice for a project that will never be used in production. Do yourself a favor and submit the project as soon as you've met the requirements and implemented best practices across the project.
+
+## How you will be evaluated
+
+- Demonstrate your genuine interest in the position by committing 2-4 hours to a screening project
+
+- Prove your knowledge of industry best practices without being explicitly directed as to what they are. That said, do not use any libraries or packages not listed in the Technical requirements
+
+- We value your time and do not want to encourage a culture of self-sacrifice for a project that will never be used in production. 
+
+- Do yourself a favor and submit the project as soon as you've met the requirements and implemented best practices across the project.
 Additional information
-If you are relatively competent in both Vue and Django, there is no reason this app should take you much longer than 2-4 hours. That is not a time restriction. It’s only an estimated time to completion.
 
-The instructions above should be clear enough for you to complete the task without any additional information.
+- If you are relatively competent in both Vue and Django, there is no reason this app should take you much longer than 2-4 hours. That is not a time restriction. It’s only an estimated time to completion.
 
-The Complete Hiring Process
+- The instructions above should be clear enough for you to complete the task without any additional information.
+
+## The Complete Hiring Process
+
 Accruvia follows a 3 step hiring process. The company intends to make final offers no later than the end of business on Tuesday, November 1.
 
 Complete this technical assessment. Grades are pass/mid/junior or fail. If you pass, you will be moved on to the next steps. We would like to receive your solution by the deadline mentioned above.
