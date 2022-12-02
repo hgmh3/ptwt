@@ -1,4 +1,4 @@
-### Accruvia Test Project - job listing on https://www.remoteok.com -Somewhere in EUROPE, SCAMMERS OR NOT
+### Accruvia Test Project - job listing on https://www.remoteok.com - Somewhere in EUROPE, SCAMMERS OR NOT
 https://docs.google.com/document/d/1Y1zuSSCBECBSgEqDdpoR5FfXk51RrRbHdyvkY59a_RU/edit#heading=h.vdkm6pb2zsh8
 See below for the full content of the document in case you might have GDrive access problems.
 
