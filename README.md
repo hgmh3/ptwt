@@ -1,22 +1,21 @@
-### Accruvia Test Project - job listing on https://www.remoteok.com - Somewhere in EUROPE, SCAMMERS OR NOT
-https://docs.google.com/document/d/1Y1zuSSCBECBSgEqDdpoR5FfXk51RrRbHdyvkY59a_RU/edit#heading=h.vdkm6pb2zsh8
+# Accruvia Test Project from https://www.remoteok.com
 See below for the full content of the document in case you might have GDrive access problems.
 
-## Poor Man's Twitter - Django + Django Rest + VueJS app
+### Poor Man's Twitter - Django + Django Rest + VueJS app
 pip install -r requirements.txt
 
-### to run type
+##### to run type
 git clone https://github.com/hgmh3/ptwt.git
 python manage.py runserver
 access with your browser: http://127.0.0.1:8000
 
-### to run tests:
+##### to run tests:
 python manage.py test
 
-### to init database (optional)
+##### to init database (optional)
 python manage.py migrate
 
-### to post data using curl, first (optional)
+##### to post data using curl, first (optional)
 python manage.py createsuperuser
 
 
